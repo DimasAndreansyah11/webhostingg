@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Konverter Suhu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Konversi Suhu</h1>
+    
+    <!-- Konversi menggunakan PHP -->
+    <form action="convert.php" method="POST">
+      <label for="temperature">Masukkan Suhu:</label>
+      <input type="number" name="temperature" id="temperature" required />
+
+      <select name="convertTo" id="convertTo">
+        <option value="fahrenheit">Ke Fahrenheit</option>
+        <option value="celsius">Ke Celsius</option>
+      </select>
+
+      <button type="submit">Konversi (PHP)</button>
+    </form>
+
+    <hr>
+
+    <!-- Konversi menggunakan JavaScript -->
+    <h2>Konversi Langsung (JavaScript)</h2>
+    <input type="number" id="jsInput" placeholder="Masukkan suhu">
+    <select id="jsSelect">
+      <option value="toF">Celsius ke Fahrenheit</option>
+      <option value="toC">Fahrenheit ke Celsius</option>
+    </select>
+    <button onclick="convertJS()">Konversi</button>
+    <p id="jsResult"></p>
+  </div>
+ <script src="script.js"></script>
+</body>
+</html>
